@@ -10,7 +10,7 @@
         $.each(settings.ReferencesDialog.fields, function (key, widget_settings) {
           $('.' + key + ' a.references-dialog-activate', context).click(function (e) {
             e.preventDefault();
-            Drupal.ReferencesDialog.open($(this).attr('href'), $(this).html());
+            Drupal.ReferencesDialog.open($(this).attr('href'), $(this).text());
             Drupal.ReferencesDialog.entityIdReceived = function (entity_type, entity_id, label) {
               if (typeof widget_settings.format !== 'undefined') {
                 var value = widget_settings.format
